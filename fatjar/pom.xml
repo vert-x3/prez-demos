@@ -75,17 +75,6 @@
                   <resource>META-INF/services/io.vertx.core.spi.VerticleFactory</resource>
                 </transformer>
               </transformers>
-              <artifactSet>
-                <!-- By default all the deps go into the fat jar, but we don't need some so we can exclude them
-                here -->
-                <excludes>
-                  <exclude>io.vertx:codegen</exclude>
-                  <exclude>junit:junit</exclude>
-                  <exclude>org.mvel:mvel2</exclude>
-                  <exclude>log4j:log4j</exclude>
-                  <exclude>org.slf4j:slf4j-api</exclude>
-                </excludes>
-              </artifactSet>
               <outputFile>${project.build.directory}/${artifactId}-${version}-fat.jar</outputFile>
             </configuration>
           </execution>
