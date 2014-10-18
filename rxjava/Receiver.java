@@ -14,6 +14,7 @@ public class Receiver extends AbstractVerticle {
          collect(Collectors.averagingDouble(d -> d))).
          subscribe(heat -> {
       System.out.println("Current heat is " + heat);
+      // vertx.eventBus().send("news-feed", "Current heat is " + heat);
     });
   }
 }
