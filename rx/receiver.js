@@ -1,6 +1,7 @@
-var Rx = require("vertx-js/rx");
+Rx = require("rx.time");
+Rx = require("rx.vertx");
 var consumer = vertx.eventBus().consumer("heat-sensor").bodyStream();
-var observable = Rx.toObservable(consumer);
+var observable = Rx.Observable.fromReadStream(consumer);
 observable.
   bufferWithTime(1000).
   filter(function (arr) { return arr.length > 0; }).
