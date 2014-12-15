@@ -1,13 +1,12 @@
-import io.vertx.core.AbstractVerticle;
+import io.vertx.lang.rxjava.AbstractVerticle ;
 import rx.Observable;
-import io.vertx.rx.java.RxHelper;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 public class Receiver extends AbstractVerticle {
 
   public void start() {
-    Observable<Double> observable = RxHelper.toObservable(vertx.eventBus().<Double>consumer("heat-sensor").bodyStream());
+    Observable<Double> observable = vertx.eventBus().<Double>consumer("heat-sensor").bodyStream().toObservable();
     observable.
          buffer(1, TimeUnit.SECONDS).
          map(samples -> samples.stream().
