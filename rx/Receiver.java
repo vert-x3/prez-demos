@@ -1,6 +1,6 @@
 import io.vertx.core.AbstractVerticle;
 import rx.Observable;
-import io.vertx.ext.rx.java.RxHelper;
+import io.vertx.rx.java.RxHelper;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
