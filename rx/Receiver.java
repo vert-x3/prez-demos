@@ -1,4 +1,4 @@
-import io.vertx.lang.rxjava.AbstractVerticle ;
+import io.vertx.rxjava.core.AbstractVerticle ;
 import rx.Observable;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;

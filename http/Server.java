@@ -1,5 +1,5 @@
 import io.vertx.core.http.HttpServerOptions;
-import io.vertx.lang.rxjava.AbstractVerticle;
+import io.vertx.rxjava.core.AbstractVerticle;
 import io.vertx.rxjava.core.http.HttpServer;
 
 public class Server extends AbstractVerticle {
